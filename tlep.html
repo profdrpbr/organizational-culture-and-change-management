@@ -4,26 +4,268 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TLEP | Organizational Culture and Change Management</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Poppins', sans-serif; background: #f3f9fb; margin: 0; color: #333; }
-    header { background: linear-gradient(90deg,#00334d,#006680); color:white; padding:1.5em; text-align:center; }
-    section { background:white; margin:30px auto; max-width:950px; border-radius:12px; padding:25px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-    h2 { color:#004466; border-left:5px solid #00a8cc; padding-left:10px; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f3f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #00334d, #006680);
+      color: white;
+      padding: 1.5em 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      text-align: center;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 70px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.3);
+    }
+
+    nav {
+      background: #004d66;
+      text-align: center;
+      padding: 0.8em 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      background: #00a8cc;
+      color: #fff;
+    }
+
+    section {
+      padding: 25px;
+      background: white;
+      margin: 25px auto;
+      max-width: 1000px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004466;
+      border-left: 5px solid #00a8cc;
+      padding-left: 10px;
+      margin-top: 25px;
+    }
+
+    h3 {
+      color: #004466;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 0.95em;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #e6f4f7;
+      color: #004466;
+      text-align: center;
+    }
+
+    td:first-child, th:first-child {
+      text-align: center;
+      width: 60px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: #007799;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .download-btn:hover {
+      background: #005f73;
+    }
+
+    footer {
+      text-align: center;
+      background: #00334d;
+      color: #eee;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
   </style>
 </head>
+
 <body>
-  <header><h1>Teaching-Learning & Evaluation Plan (TLEP)</h1></header>
+
+  <!-- ✅ HEADER -->
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="Course Logo" class="logo">
+      <div class="header-text">
+        <h1>Organizational Culture and Change Management</h1>
+        <p>Teaching–Learning and Evaluation Plan (TLEP)</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ NAVIGATION -->
+  <nav>
+    <a href="index.html">Syllabus</a>
+    <a href="tlep.html" class="active">TLEP</a>
+    <a href="module1.html">Module 1</a>
+    <a href="module2.html">Module 2</a>
+    <a href="module3.html">Module 3</a>
+    <a href="module4.html">Module 4</a>
+    <a href="module5.html">Module 5</a>
+    <a href="questionbank.html">Question Bank</a>
+    <a href="queries.html">Queries</a>
+  </nav>
+
+  <!-- ✅ MAIN CONTENT -->
   <section>
-    <h2>📘 Organizational Culture and Change Management</h2>
-    <p>This section will outline week-wise learning outcomes, pedagogy, and evaluation strategy as per university TLEP guidelines.</p>
-    <ul>
-      <li>Week 1–2: Understanding organizational culture and models</li>
-      <li>Week 3–4: Change management frameworks and leadership</li>
-      <li>Week 5–6: Digital and agile transformation case studies</li>
-      <li>Week 7–8: Presentations, assessments, and reflection exercises</li>
-    </ul>
+    <h2>🎯 Course Outcomes (CO)</h2>
+    <table>
+      <tr>
+        <th>CO Code</th>
+        <th>Course Outcome</th>
+        <th>BTL</th>
+      </tr>
+      <tr>
+        <td>CO1</td>
+        <td>Analyze the impact of organizational culture on behavior, decision-making, and digital transformation using cultural frameworks.</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>CO2</td>
+        <td>Interpret change management models and strategies, focusing on leadership roles and successful implementation in organizations.</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>CO3</td>
+        <td>Assess the role of technology in shaping digital culture and select strategies for overcoming cultural barriers in transformation.</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>CO4</td>
+        <td>Compare agile change management strategies for digital transformations and address challenges like resistance and ethical considerations.</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>CO5</td>
+        <td>Demonstrate current trends in diversity, inclusion, hybrid work models, and data-driven cultures for effective change management.</td>
+        <td>3</td>
+      </tr>
+    </table>
+
+    <h2>🧩 Session Plan (Summary)</h2>
+    <table>
+      <tr>
+        <th>Module</th>
+        <th>Title</th>
+        <th>Hours</th>
+        <th>Course Outcome</th>
+        <th>Component</th>
+        <th>Mode of Delivery</th>
+      </tr>
+      <tr><td>1</td><td>Organizational Culture Dynamics</td><td>12</td><td>CO1</td><td>Lecture + Experiential</td><td>Synchronous</td></tr>
+      <tr><td>2</td><td>Change Management Models</td><td>12</td><td>CO2</td><td>Lecture + Experiential</td><td>Synchronous</td></tr>
+      <tr><td>3</td><td>Building Digital Culture</td><td>12</td><td>CO3</td><td>Lecture + Experiential</td><td>Synchronous</td></tr>
+      <tr><td>4</td><td>Agile Change Management</td><td>12</td><td>CO4</td><td>Lecture + Experiential</td><td>Synchronous</td></tr>
+      <tr><td>5</td><td>Trends and Practices</td><td>12</td><td>CO5</td><td>Lecture + Experiential</td><td>Synchronous</td></tr>
+    </table>
+
+    <h2>📘 Non-Contact Hours (Asynchronous)</h2>
+    <table>
+      <tr>
+        <th>Module</th>
+        <th>Focus Area</th>
+        <th>Hours</th>
+        <th>Course Outcome</th>
+        <th>Mode</th>
+      </tr>
+      <tr><td>1</td><td>Culture Elements, Climate, Digitalization</td><td>6</td><td>CO1</td><td>Asynchronous</td></tr>
+      <tr><td>2</td><td>Change Models and Reflections</td><td>6</td><td>CO2</td><td>Asynchronous</td></tr>
+      <tr><td>3</td><td>Digital Transformation & AI Reflection</td><td>6</td><td>CO3</td><td>Asynchronous</td></tr>
+      <tr><td>4</td><td>Agile, KPI Design & Ethics</td><td>6</td><td>CO4</td><td>Asynchronous</td></tr>
+      <tr><td>5</td><td>DEIB, Hybrid Work & Sustainability</td><td>6</td><td>CO5</td><td>Asynchronous</td></tr>
+    </table>
+
+    <h2>📊 Assessment Plan</h2>
+    <table>
+      <tr>
+        <th>Assessment Type</th>
+        <th>Description</th>
+        <th>Weightage</th>
+        <th>CO1</th>
+        <th>CO2</th>
+        <th>CO3</th>
+        <th>CO4</th>
+        <th>CO5</th>
+      </tr>
+      <tr>
+        <td>CA1</td><td>Organizational Culture Audit (OCAI/CVF)</td><td>10%</td><td>10</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+      <tr>
+        <td>CA2</td><td>Change Management Case Analysis</td><td>10%</td><td>-</td><td>6</td><td>4</td><td>-</td><td>-</td></tr>
+      <tr>
+        <td>CA3</td><td>Digital Transformation & Culture Strategy</td><td>10%</td><td>-</td><td>-</td><td>10</td><td>-</td><td>-</td></tr>
+      <tr>
+        <td>CA4</td><td>Trends & Practices Report (DEIB/Hybrid)</td><td>10%</td><td>-</td><td>-</td><td>-</td><td>-</td><td>10</td></tr>
+      <tr>
+        <td>Unit Test</td><td>Formative Unit Evaluation</td><td>10%</td><td>2.19</td><td>2.18</td><td>2.18</td><td>0.79</td><td>2.66</td></tr>
+      <tr>
+        <td><b>Total CA</b></td><td>Continuous Assessment (50%)</td><td>50%</td><td>12.19</td><td>8.18</td><td>6.18</td><td>10.79</td><td>12.66</td></tr>
+      <tr>
+        <td>ESE</td><td>End-Semester Examination</td><td>50%</td><td>10.94</td><td>10.94</td><td>10.94</td><td>3.90</td><td>13.28</td></tr>
+    </table>
+
+    <div style="text-align:center;">
+      <a href="tlep.pdf" download class="download-btn">⬇️ Download Full TLEP (PDF)</a>
+    </div>
   </section>
+
+  <footer>
+    © 2025 Department of Management Studies · All Rights Reserved
+  </footer>
+
 </body>
 </html>
-
