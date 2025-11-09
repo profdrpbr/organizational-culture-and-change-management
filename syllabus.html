@@ -5,177 +5,206 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Syllabus | Organizational Culture and Change Management</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #f4f8fa;
+      background: #f3f9fb;
       color: #333;
       line-height: 1.6;
     }
 
+    /* ---------- HEADER ---------- */
     header {
-      background: linear-gradient(90deg, #004466, #007799);
+      background: linear-gradient(90deg, #00334d, #006680);
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 40px;
+      padding: 1.5em 0;
       box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     }
 
-    header img {
-      height: 55px;
-      border-radius: 10px;
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      text-align: center;
     }
 
-    header h1 {
+    .logo {
+      height: 70px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.3);
+    }
+
+    .header-text h1 {
+      font-size: 1.8em;
       margin: 0;
-      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    .header-text p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 1em;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      background: #004d66;
+      text-align: center;
+      padding: 0.8em 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     nav a {
-      color: white;
+      color: #f0f0f0;
       text-decoration: none;
-      margin-left: 20px;
-      font-weight: 500;
-      transition: color 0.3s;
+      margin: 0 14px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
     }
 
-    nav a:hover {
-      color: #ffe680;
+    nav a:hover, nav a.active {
+      background: #00a8cc;
+      color: #fff;
     }
 
-    main {
-      padding: 60px 8%;
-      background: #fff;
-      margin: 30px;
+    /* ---------- MAIN CONTENT ---------- */
+    section {
+      padding: 25px;
+      background: white;
+      margin: 25px auto;
+      max-width: 950px;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
 
     h2 {
       color: #004466;
-      border-bottom: 3px solid #007799;
-      display: inline-block;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
+      border-left: 5px solid #00a8cc;
+      padding-left: 10px;
+      margin-top: 25px;
     }
 
     h3 {
-      color: #005f73;
+      color: #004466;
+      margin-top: 20px;
     }
 
-    ul, ol {
-      margin-left: 20px;
-    }
+    ul, ol { line-height: 1.8; }
+    .module { margin-top: 25px; }
 
     footer {
-      background-color: #004466;
-      color: white;
       text-align: center;
+      background: #00334d;
+      color: #eee;
       padding: 15px;
-      font-size: 0.9rem;
       margin-top: 40px;
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: #007799;
-      color: white;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    a.button:hover {
-      background-color: #005f73;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      nav {
-        margin-top: 10px;
-      }
+      font-size: 0.9em;
+      letter-spacing: 0.3px;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div style="display:flex; align-items:center; gap:15px;">
-      <img src="logo.png" alt="Course Logo" />
-      <h1>Organizational Culture and Change Management</h1>
-    </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="syllabus.html" style="color:#ffe680;">Syllabus</a>
-      <a href="index.html#modules">Modules</a>
-      <a href="index.html#queries">Queries</a>
-      <a href="index.html#about">About</a>
-    </nav>
+  <!-- ✅ HEADER -->
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="Course Logo" class="logo">
+      <div class="header-text">
+        <h1>Organizational Culture and Change Management</h1>
+        <p>Department of Management Studies | Jain (Deemed-to-be University)</p>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <h2>Course Syllabus</h2>
+  <!-- ✅ NAVIGATION (TLEP ADDED) -->
+  <nav>
+    <a href="index.html" class="active">Syllabus</a>
+    <a href="tlep.html">TLEP</a>
+    <a href="module1.html">Module 1</a>
+    <a href="module2.html">Module 2</a>
+    <a href="module3.html">Module 3</a>
+    <a href="module4.html">Module 4</a>
+    <a href="module5.html">Module 5</a>
+    <a href="questionbank.html">Question Bank</a>
+    <a href="queries.html">Queries</a>
+  </nav>
 
-    <p><strong>Semester:</strong> I &nbsp; | &nbsp; <strong>Credits:</strong> 4 &nbsp; | &nbsp; <strong>Total Hours:</strong> 60</p>
+  <!-- ✅ MAIN CONTENT -->
+  <section>
+    <h2>📘 Course Syllabus</h2>
+    <p><strong>Semester:</strong> I &nbsp; | &nbsp; <strong>Credits:</strong> 4 &nbsp; | &nbsp; <strong>Hours:</strong> 60</p>
 
-    <h3>Course Objective</h3>
+    <h3>🎯 Course Objective</h3>
     <p>To enhance the skills to effectively shape organizational behaviour, implement successful change strategies, foster innovation, manage digital transitions, and build inclusive, adaptable, and sustainable work environments.</p>
 
-    <h3>Module Breakdown</h3>
-    <ul>
-      <li><strong>Module 1: Organizational Culture Dynamics</strong><br>
-        Organizational culture in shaping behaviour and decision-making, levels of culture, leadership roles, assessing culture and climate, subcultures, digitalization impact, Schein and Deal & Kennedy models, teamwork and collaboration.
-      </li>
-      <li><strong>Module 2: Change Management Models</strong><br>
-        Change process, drivers, leadership challenges, models – Lewin, Kotter, McKinsey 7S, ADKAR, Bridges, Competing Values, strategies for implementation.
-      </li>
-      <li><strong>Module 3: Building Digital Culture</strong><br>
-        Technology and AI impact on culture, stakeholder engagement, culture audits and mapping, cross-functional collaboration, addressing cultural barriers.
-      </li>
-      <li><strong>Module 4: Agile Change Management</strong><br>
-        Digital-era adaptations, KPIs, ethical transformation, addressing resistance, agile frameworks, institutionalizing change.
-      </li>
-      <li><strong>Module 5: Trends and Practices</strong><br>
-        DEIB, hybrid work, data-driven and innovation cultures, sustainability integration, CSR, automation and cultural evolution.
-      </li>
-    </ul>
+    <!-- MODULE 1 -->
+    <div class="module">
+      <h3>MODULE 1: Organizational Culture Dynamics (8 Hours)</h3>
+      <p>Organizational culture in shaping behavior and decision-making, elements and levels of organizational culture, leadership’s role in shaping culture, assessing culture and climate, subcultures, and culture as a competitive advantage. Types of cultures—Clan, Adhocracy, Market, and Hierarchy. Impact of digitalization on culture. Theoretical frameworks—Schein’s Model, Deal & Kennedy’s Model. Purpose-driven environments, collaboration, and teamwork enhancement.</p>
+    </div>
 
-    <h3>Course Outcomes (CO)</h3>
+    <!-- MODULE 2 -->
+    <div class="module">
+      <h3>MODULE 2: Change Management Models (10 Hours)</h3>
+      <p>Overview of change management, the organizational change process, and leadership challenges. Drivers and forces of change, incremental vs. transformational change. Change models—Lewin’s, Kotter’s 8-Step, McKinsey 7S, ADKAR, and Bridges’ Transition Model. Competing Values Framework. Role of leadership in change management and strategies for successful change implementation.</p>
+    </div>
+
+    <!-- MODULE 3 -->
+    <div class="module">
+      <h3>MODULE 3: Building Digital Culture (10 Hours)</h3>
+      <p>Digital transformation and its impact on culture, technology’s role, and AI influence. Challenges and opportunities of digital transformation. Strategies for building strong digital cultures, cultural barriers to change, advanced stakeholder engagement, cross-functional collaboration, culture audits, gap analysis, mapping, and benchmarking.</p>
+    </div>
+
+    <!-- MODULE 4 -->
+    <div class="module">
+      <h3>MODULE 4: Agile Change Management (8 Hours)</h3>
+      <p>Adapting change management to the digital era, KPIs for change, identifying challenges and successes in cultural transformation. Leveraging technology, addressing resistance, and managing ethical and digital transformation. Agile frameworks, crisis management, and institutionalizing change in culture.</p>
+    </div>
+
+    <!-- MODULE 5 -->
+    <div class="module">
+      <h3>MODULE 5: Trends and Practices (9 Hours)</h3>
+      <p>Diversity, Equity, Inclusion, and Belongingness (DEIB); managing hybrid and remote work cultures; purpose-driven and data-driven culture; innovation-driven culture; cross-cultural sensitivity; sustainability integration; automation and work culture; data-driven decision making; and CSR and change management.</p>
+    </div>
+
+    <h2>🎓 Course Outcomes (CO)</h2>
     <ol>
       <li>Analyze the impact of organizational culture on behavior, decision-making, and digital transformation using cultural frameworks.</li>
-      <li>Interpret change management models and strategies, focusing on leadership roles.</li>
-      <li>Assess the role of technology in shaping digital culture and overcoming cultural barriers.</li>
-      <li>Compare agile change management strategies and address ethical and resistance challenges.</li>
-      <li>Demonstrate trends in DEIB, hybrid work, and sustainability-driven cultures.</li>
+      <li>Interpret change management models and leadership strategies for successful organizational transformation.</li>
+      <li>Assess technology’s role in digital culture and strategies for overcoming cultural barriers.</li>
+      <li>Compare agile change management approaches and address ethical and digital transformation challenges.</li>
+      <li>Demonstrate awareness of DEIB, hybrid work, and data-driven cultures for effective change management.</li>
     </ol>
 
-    <h3>References</h3>
-    <ul>
-      <li>Sinha, J. B. P. (2019). <em>Organizational Culture: A Perspective from India</em>. Sage Publications.</li>
-      <li>Sengupta, N. (2018). <em>Change Management: A Case Study Approach</em>. Himalaya Publishing House.</li>
-      <li>Nilakant, V. & Ramnarayan, S. (2024). <em>Change Management: Altering Mindsets in a Global Context</em>. SAGE Publications India.</li>
-      <li>Cameron, K. S. & Quinn, R. E. (2019). <em>Diagnosing and Changing Organizational Culture</em>. Wiley.</li>
-      <li>Cummings, T. G. & Worley, C. G. (2018). <em>Organization Development and Change</em>. Cengage Learning.</li>
-      <li>Ghosh, A. & Gupta, A. (2019). <em>Case Studies in Organizational Culture and Change Management</em>. Excel Books.</li>
-      <li>Strohmeier, S. & Piazza, F. (2020). <em>Digital Transformation: Challenges and Opportunities</em>. Springer.</li>
-    </ul>
-
-    <a href="index.html" class="button">← Back to Home</a>
-  </main>
+    <h2>📖 Reference Books</h2>
+    <ol>
+      <li>Sinha, J. B. P. (2019). <em>Organizational Culture: A Perspective from India.</em> Sage Publications.</li>
+      <li>Sengupta, N. (2018). <em>Change Management: A Case Study Approach.</em> Himalaya Publishing House.</li>
+      <li>Nilakant, V., & Ramnarayan, S. (2024). <em>Change Management: Altering Mindsets in a Global Context.</em> SAGE Publications India.</li>
+      <li>Singh, K. (2024). <em>Organizational Change: A Comprehensive Guide for Managers.</em> Pearson Education India.</li>
+      <li>Ghosh, A., & Gupta, A. (2019). <em>Case Studies in Organizational Culture and Change Management.</em> Excel Books.</li>
+      <li>Cameron, K. S., & Quinn, R. E. (2019). <em>Diagnosing and Changing Organizational Culture.</em> Wiley.</li>
+      <li>Cummings, T. G., & Worley, C. G. (2018). <em>Organization Development and Change.</em> Cengage Learning.</li>
+      <li>Strohmeier, S., & Piazza, F. (2020). <em>Digital Transformation: Challenges and Opportunities.</em> Springer.</li>
+      <li>Scott, J. E., & Jaffe, D. T. (2017). <em>Change Management: Principles and Practices.</em> Sage Publications.</li>
+    </ol>
+  </section>
 
   <footer>
     © 2025 Department of Management Studies · All Rights Reserved
   </footer>
+
 </body>
 </html>
