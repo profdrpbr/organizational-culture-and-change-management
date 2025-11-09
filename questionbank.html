@@ -13,8 +13,11 @@
     background: #f3f9fb;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
+    user-select: none; /* disables text selection */
   }
 
+  /* ---------- HEADER ---------- */
   header {
     background: linear-gradient(90deg, #00334d, #006680);
     color: white;
@@ -22,15 +25,14 @@
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.25);
   }
-
   header img {
     height: 65px;
     border-radius: 8px;
   }
-
-  header h1 { margin: 10px 0 0; font-size: 1.8em; }
+  header h1 { margin: 10px 0 0; font-size: 1.9em; }
   header p { margin: 0; font-size: 1em; opacity: 0.9; }
 
+  /* ---------- NAVIGATION ---------- */
   nav {
     background: #004d66;
     text-align: center;
@@ -39,22 +41,20 @@
     top: 0;
     z-index: 1000;
   }
-
   nav a {
     color: #f0f0f0;
     text-decoration: none;
     margin: 0 14px;
     font-weight: 600;
+    font-size: 0.95em;
     padding: 6px 12px;
     border-radius: 6px;
-    transition: 0.3s;
+    transition: all 0.3s;
   }
+  nav a:hover { background: #00a8cc; color: #fff; }
+  nav a.active { background: #007799; color: #fff; }
 
-  nav a:hover, nav a.active {
-    background: #00a8cc;
-    color: #fff;
-  }
-
+  /* ---------- SECTION ---------- */
   section {
     padding: 25px;
     background: white;
@@ -63,36 +63,7 @@
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0,0,0,0.1);
   }
-
-  h2 {
-    color: #004466;
-    border-left: 5px solid #00a8cc;
-    padding-left: 10px;
-  }
-
-  h3 {
-    color: #006680;
-    margin-top: 20px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-  }
-
-  th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-    font-size: 0.9em;
-  }
-
-  th {
-    background: #e6f9ff;
-    color: #004466;
-  }
-
+  h2 { color: #004466; border-left: 5px solid #00a8cc; padding-left: 10px; }
   .notice {
     background: #e6f9ff;
     padding: 10px 15px;
@@ -101,18 +72,74 @@
     border-radius: 6px;
   }
 
-  .btn {
+  /* ---------- IMAGES ---------- */
+  figure {
+    margin: 0 0 20px;
+  }
+  figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  .question-image {
+    width: 100%;
+    border: 2px solid #004466;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: block;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  @keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---------- OVERLAY ---------- */
+  .overlay-protect {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 10;
+    background: transparent;
+    pointer-events: none;
+  }
+
+  .back-btn {
     display: inline-block;
     background: #006680;
     color: white;
     padding: 10px 20px;
-    border-radius: 6px;
     text-decoration: none;
+    border-radius: 8px;
     font-weight: bold;
     margin-top: 20px;
   }
+  .back-btn:hover { background: #004466; }
 
-  .btn:hover { background: #004466; }
+  /* ---------- WATERMARK ---------- */
+  .watermark {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 5;
+    pointer-events: none;
+    background: url('logo.png') center center no-repeat;
+    background-size: 500px auto;
+    opacity: 0.08;
+  }
+
+  /* ---------- BLACKOUT ---------- */
+  .blackout {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: black;
+    z-index: 9999;
+    opacity: 0.9;
+    display: none;
+  }
 
   footer {
     text-align: center;
@@ -120,19 +147,19 @@
     color: #eee;
     padding: 15px;
     margin-top: 40px;
-    font-size: 0.9em;
   }
 </style>
 </head>
 
 <body oncontextmenu="return false;">
-
+  <!-- HEADER -->
   <header>
-    <img src="logo.png" alt="University Logo">
+    <img src="logo.png" alt="Jain University Logo">
     <h1>Organizational Culture and Change Management</h1>
-    <p>Question Bank | 25MCOM1H03 | Faculty: Dr. Patcha Bhujanga Rao</p>
+    <p>Question Bank | Course Code: 25MCOM1H03 | Jain (Deemed-to-be University)</p>
   </header>
 
+  <!-- NAVIGATION -->
   <nav>
     <a href="index.html">Syllabus</a>
     <a href="tlep.html">TLEP</a>
@@ -145,56 +172,80 @@
     <a href="queries.html">Queries</a>
   </nav>
 
+  <!-- MAIN SECTION -->
   <section>
-    <h2>📘 Question Bank – Organizational Culture and Change Management</h2>
+    <h2>📘 Question Bank (Protected View)</h2>
     <p class="notice">
-      This Question Bank follows Bloom’s Taxonomy and CO–Module mapping as per the course outcomes. 
-      Direct downloading or redistribution is restricted for academic integrity.
+      Viewing is restricted for academic integrity — downloading, printing, copying, and screenshots are discouraged.
+      This material is for internal use only within Jain (Deemed-to-be University).
     </p>
 
-    <h3>📑 Blueprint Summary</h3>
-    <table>
-      <tr><th>Section</th><th>Module 1</th><th>Module 2</th><th>Module 3</th><th>Module 4</th><th>Module 5</th></tr>
-      <tr><td>A (5 marks)</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
-      <tr><td>B (9 marks)</td><td>1</td><td>1</td><td>1</td><td>–</td><td>–</td></tr>
-      <tr><td>C (12 marks)</td><td>–</td><td>–</td><td>–</td><td>–</td><td>1</td></tr>
-    </table>
-
-    <h3>SECTION A – 5 Marks Questions (1:6 Ratio)</h3>
-    <ul>
-      <li>Analyze how leadership influences the development of organizational culture. (CO1, M1, BTL-4)</li>
-      <li>Examine the role of organizational culture in shaping employee behavior and decision-making. (CO1, M1)</li>
-      <li>Apply Lewin’s change model to a company facing digital transformation. (CO2, M2)</li>
-      <li>Evaluate how digital transformation reshapes organizational culture. (CO3, M3)</li>
-      <li>Analyze how agile principles enhance change responsiveness. (CO4, M4)</li>
-      <li>Apply the concept of DEIB (Diversity, Equity, Inclusion, and Belonging) to organizational culture. (CO5, M5)</li>
-    </ul>
-
-    <h3>SECTION B – 9 Marks Questions (1:6 Ratio)</h3>
-    <ul>
-      <li>Analyze how different types of organizational culture influence innovation and performance. (CO1, M1)</li>
-      <li>Apply Kotter’s 8-step model to a real-life business facing merger-induced change. (CO2, M2)</li>
-      <li>Evaluate challenges organizations face in fostering digital collaboration across teams. (CO3, M3)</li>
-      <li>Assess how AI-driven technologies redefine culture and decision-making. (CO3, M3)</li>
-      <li>Judge how digital culture transformation contributes to employee empowerment. (CO3, M3)</li>
-    </ul>
-
-    <h3>SECTION C – Case Study (12 Marks)</h3>
-    <ul>
-      <li><strong>Diversity and Inclusion at Infosys:</strong> Analyze Infosys’s DEIB culture and design a 10–12 item questionnaire to assess inclusion and belonging. (CO5)</li>
-      <li><strong>Hybrid Work and Culture at TCS:</strong> Examine TCS’s hybrid transition and design a tool to measure collaboration, communication, and productivity. (CO5)</li>
-      <li><strong>Sustainability and Culture at ITC Ltd.:</strong> Analyze ITC’s sustainability practices and design a questionnaire to assess employee engagement. (CO5)</li>
-    </ul>
+    <div style="position: relative;">
+      <!-- Question Bank Images -->
+      <figure>
+        <img src="qb-page1.png" alt="Question Bank Page 1" class="question-image">
+        <figcaption>Page 1 of 4</figcaption>
+      </figure>
+      <figure>
+        <img src="qb-page2.png" alt="Question Bank Page 2" class="question-image">
+        <figcaption>Page 2 of 4</figcaption>
+      </figure>
+      <figure>
+        <img src="qb-page3.png" alt="Question Bank Page 3" class="question-image">
+        <figcaption>Page 3 of 4</figcaption>
+      </figure>
+      <figure>
+        <img src="qb-page4.png" alt="Question Bank Page 4" class="question-image">
+        <figcaption>Page 4 of 4</figcaption>
+      </figure>
+      <div class="overlay-protect"></div>
+    </div>
 
     <div style="text-align:center;">
-      <a href="index.html" class="btn">🏠 Back to Home (Syllabus)</a>
+      <a href="index.html" class="back-btn">🏠 Back to Home (Syllabus)</a>
     </div>
   </section>
 
+  <!-- WATERMARK AND BLACKOUT -->
+  <div class="watermark"></div>
+  <div class="blackout" id="blackout"></div>
+
+  <!-- FOOTER -->
   <footer>
-    © 2025 Dr. Patcha Bhujanga Rao · Department of Management Studies · Jain (Deemed-to-be University)
+    © 2025 Dr. Patcha Bhujanga Rao · Organizational Culture & Change Management · Jain (Deemed-to-be University)
   </footer>
 
+  <script>
+    // Disable right-click & block common shortcuts
+    document.addEventListener('keydown', e => {
+      const blocked = ['s','p','u','c','x','a'];
+      if ((e.ctrlKey && blocked.includes(e.key.toLowerCase())) || e.key === 'PrintScreen') {
+        e.preventDefault();
+        showWarning();
+      }
+    });
+
+    // Show warning message on screenshot or shortcut attempt
+    function showWarning() {
+      const warn = document.createElement('div');
+      warn.textContent = "⚠️ Screenshots or downloads are not permitted for this academic material.";
+      warn.style.position = 'fixed';
+      warn.style.top = '50%';
+      warn.style.left = '50%';
+      warn.style.transform = 'translate(-50%, -50%)';
+      warn.style.background = 'rgba(0,0,0,0.85)';
+      warn.style.color = 'white';
+      warn.style.padding = '20px 30px';
+      warn.style.borderRadius = '10px';
+      warn.style.fontSize = '1rem';
+      warn.style.zIndex = '10000';
+      warn.style.textAlign = 'center';
+      document.body.appendChild(warn);
+      setTimeout(() => warn.remove(), 2500);
+    }
+
+    // Clear clipboard periodically to prevent copying
+    setInterval(() => navigator.clipboard.writeText(''), 1000);
+  </script>
 </body>
 </html>
-
