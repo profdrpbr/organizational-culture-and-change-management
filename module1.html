@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Module 1 | Organizational Culture and Change Management</title>
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -20,34 +21,21 @@
       background: linear-gradient(90deg, #00334d, #006680);
       color: white;
       padding: 1.5em 0;
+      text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     }
 
     .header-container {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 15px;
       flex-wrap: wrap;
-      text-align: center;
     }
 
     .logo {
       height: 70px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(255,255,255,0.3);
-    }
-
-    .header-text h1 {
-      font-size: 1.8em;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    .header-text p {
-      margin: 0;
-      opacity: 0.9;
-      font-size: 1em;
     }
 
     nav {
@@ -79,7 +67,7 @@
       padding: 25px;
       background: white;
       margin: 25px auto;
-      max-width: 950px;
+      max-width: 1000px;
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
@@ -88,6 +76,7 @@
       color: #004466;
       border-left: 5px solid #00a8cc;
       padding-left: 10px;
+      margin-top: 25px;
     }
 
     h3 {
@@ -95,21 +84,28 @@
       margin-top: 20px;
     }
 
-    ul, ol { line-height: 1.8; }
+    ul, ol {
+      line-height: 1.8;
+    }
 
-    .download-btn {
+    .button-bar {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
       display: inline-block;
       background: #007799;
       color: white;
-      padding: 10px 18px;
+      padding: 10px 20px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 500;
-      margin: 10px 0 20px 0;
-      transition: background 0.3s ease;
+      transition: 0.3s ease;
+      margin: 8px;
     }
 
-    .download-btn:hover {
+    .btn:hover {
       background: #005f73;
     }
 
@@ -126,19 +122,21 @@
 
 <body>
 
+  <!-- ✅ HEADER -->
   <header>
     <div class="header-container">
       <img src="logo.png" alt="Course Logo" class="logo">
       <div class="header-text">
         <h1>Organizational Culture and Change Management</h1>
-        <p>Module 1: Organizational Culture Dynamics</p>
+        <p>Module 1 — Organizational Culture Dynamics</p>
       </div>
     </div>
   </header>
 
+  <!-- ✅ NAVIGATION -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="syllabus.html">Syllabus</a>
+    <a href="index.html">Syllabus</a>
+    <a href="tlep.html">TLEP</a>
     <a href="module1.html" class="active">Module 1</a>
     <a href="module2.html">Module 2</a>
     <a href="module3.html">Module 3</a>
@@ -148,40 +146,44 @@
     <a href="queries.html">Queries</a>
   </nav>
 
+  <!-- ✅ MODULE CONTENT -->
   <section>
     <h2>📘 Module 1: Organizational Culture Dynamics</h2>
-    <a href="Module1.pptx" download class="download-btn">⬇️ Download Module 1 PPT</a>
+    <p>
+      This module introduces the core concepts of organizational culture and its influence on employee behavior,
+      decision-making, and organizational success. It explores leadership’s role, subcultures, climate differences,
+      and the impact of digitalization, with key theoretical frameworks like <b>Schein’s Model</b> and <b>Deal & Kennedy’s Framework</b>.
+    </p>
 
-    <p>This module introduces the foundational concepts of <strong>Organizational Culture</strong> — its dynamics, leadership influence, and role in shaping employee behavior and organizational success. It explores how shared values, beliefs, and assumptions form the backbone of effective organizations and how leaders can leverage culture as a competitive advantage.</p>
-
-    <h3>🔹 Key Topics</h3>
+    <h3>Key Topics</h3>
     <ul>
-      <li>Understanding Organizational Culture and its Influence on Behavior</li>
-      <li>Elements and Levels of Organizational Culture (Schein’s Model)</li>
-      <li>Role of Leadership in Shaping Culture</li>
-      <li>Assessing Organizational Culture – Tools and Techniques</li>
-      <li>Organizational Climate vs. Culture (Deal & Kennedy Framework)</li>
-      <li>Subcultures and their Impact on Innovation and Cohesion</li>
-      <li>Culture as a Competitive Advantage</li>
-      <li>Types of Organizational Cultures – Clan, Adhocracy, Market, Hierarchy</li>
-      <li>Impact of Digitalization on Organizational Culture</li>
-      <li>Purpose-Driven Work Environments and Collaboration</li>
+      <li>Understanding Organizational Culture and Its Components</li>
+      <li>Leadership’s Role in Shaping Culture</li>
+      <li>Organizational Climate vs. Culture</li>
+      <li>Subcultures and Culture as Competitive Advantage</li>
+      <li>Digitalization and Cultural Transformation</li>
+      <li>Theoretical Models (Schein, Deal & Kennedy)</li>
     </ul>
 
-    <h3>🎯 Learning Outcomes</h3>
+    <h3>Learning Outcomes</h3>
     <ul>
-      <li>Analyze how organizational culture influences decision-making and innovation.</li>
-      <li>Differentiate between organizational climate and culture using theoretical models.</li>
-      <li>Evaluate the role of leaders in designing and sustaining an effective culture.</li>
-      <li>Interpret how digitalization reshapes values and behavior in organizations.</li>
+      <li>Analyze how culture drives organizational behavior and performance.</li>
+      <li>Identify layers and levels of culture using established models.</li>
+      <li>Assess how leadership and digitalization reshape organizational culture.</li>
+      <li>Differentiate between organizational culture and climate with examples.</li>
     </ul>
 
-    <h3>📹 Reference Video</h3>
-    <p>Watch this short overview on <em>Understanding Organizational Culture</em>:</p>
-    <p><a href="https://www.youtube.com/watch?v=jc94qmUG1hw" target="_blank" class="download-btn">▶ Watch Video</a></p>
+    <h3>Interactive Resources</h3>
+    <p>
+      - Organizational Culture Assessment Instrument (OCAI) <br>
+      - Case Studies: Zappos, Southwest Airlines, Google Culture Audit <br>
+      - Video Lecture: <a href="https://www.youtube.com/watch?v=jc94qmUG1hw" target="_blank">Understanding Organizational Culture</a>
+    </p>
 
-    <h3>📑 Summary</h3>
-    <p>Organizational culture is both the personality and backbone of an organization. It determines how employees interact, solve problems, and respond to change. A strong, purpose-driven culture fosters collaboration, innovation, and resilience, positioning organizations for long-term success in the digital era.</p>
+    <div class="button-bar">
+      <a href="Module1.pptx" download class="btn">⬇️ Download Module 1 (PPTX)</a>
+      <a href="index.html" class="btn">🏠 Back to Home</a>
+    </div>
   </section>
 
   <footer>
@@ -190,4 +192,3 @@
 
 </body>
 </html>
-
